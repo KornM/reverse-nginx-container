@@ -10,6 +10,8 @@ COPY adjust_nginx_settings.sh .
 RUN chmod +x adjust_nginx_settings.sh
 
 ENV PROXYPASS=$PROXYPASS
+ENV VERBS=$VERBS
+
 EXPOSE 80
 
 ENTRYPOINT [ "/etc/nginx/adjust_nginx_settings.sh" ]
